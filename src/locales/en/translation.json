@@ -4,5 +4,17 @@
   "bookingHistory": "Booking History",
   "trackParcel": "Track Parcel",
   "beADeliveryAgent": "Be a Delivery Agent",
-  "login": "Login"
+  "login": "Login",
+
+  "sliderHeading1": "Fast, Reliable & Secure Courier Service",
+  "sliderSubHeading1": "Track your parcels in real-time. Seamless booking, transparent delivery, multilingual support — everything in one place.",
+  "sliderButton1": "Book Now",
+
+  "sliderHeading2": "Simplify Your Delivery Experience",
+  "sliderSubHeading2": "From booking to doorstep — manage every parcel with precision, speed, and real-time tracking.",
+  "sliderButton2": "Live Track",
+
+  "sliderHeading3": "Deliver Smarter with GoQuick",
+  "sliderSubHeading3": "Connect, track, and deliver — all in one powerful courier platform built for modern logistics.",
+  "sliderButton3": "Track Now"
 }

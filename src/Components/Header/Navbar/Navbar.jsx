@@ -9,11 +9,13 @@ import { MdLanguage } from 'react-icons/md';
 const Navbar = () => {
 
   const { t, i18n } = useTranslation();
-
   const [language, setLanguage] = useState(true);
 
   const links = <>
+
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white px-2 py-0.5 rounded-full font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/'}>{t('home')}</NavLink>
+
+    {/* Customer Routes */}
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookParcel'}>{t('bookParcel')}</NavLink>
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookingHistory'}>{t('bookingHistory')}</NavLink>
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/trackParcel'}>{t('trackParcel')}</NavLink>
@@ -22,11 +24,17 @@ const Navbar = () => {
     {/* Delivery agent routes */}
     {/* <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/assignedParcels'}>Assigned Parcels</NavLink>
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/updateStatus'}>Update Status</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Delivery Route</NavLink> */}
+    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Delivery Route</NavLink> 
+    
+    // Admin Routes
+    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Dashboard</NavLink>
+    */}
   </>
 
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4 py-2 lg:px-8 lg:py-4">
+    <div className="navbar bg-base-100 shadow-sm px-4 py-2 lg:px-8 lg:py-2">
+
+      {/* For mobile */}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="mr-2 lg:hidden">
@@ -43,12 +51,16 @@ const Navbar = () => {
           <Link className="font-semibold text-lg lg:text-2xl">Go<span className='text-[#CE133D]'><i>Quick</i></span></Link>
         </div>
       </div>
+
+      {/* For desktop */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {links}
         </ul>
       </div>
       <div className="navbar-end space-x-3 lg:space-x-6">
+
+        {/* Language Toggle */}
         <div className="flex gap-1 items-center">
           {
             language ? (
@@ -77,8 +89,9 @@ const Navbar = () => {
           {
             language ? <p className='font-medium'>En</p> : <p className='font-medium'>Bn</p>
           }
-
         </div>
+
+        {/* Login/Logout*/}
         <Link to={'/login'} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-1 px-3 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('login')}</Link>
       </div>
     </div >
