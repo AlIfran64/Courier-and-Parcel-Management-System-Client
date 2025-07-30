@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router';
 import logo from '../../../../src/assets/images/Transparent logo.png';
 import { useTranslation } from 'react-i18next';
-import { FaFlagUsa } from 'react-icons/fa';
 import { MdLanguage } from 'react-icons/md';
 
 
 const Navbar = () => {
 
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState(true);
 
   const links = <>
 
@@ -62,37 +60,22 @@ const Navbar = () => {
 
         {/* Language Toggle */}
         <div className="flex gap-1 items-center">
-          {
-            language ? (
-              <button
-                onClick={() => {
-                  i18n.changeLanguage('en');
-                  setLanguage(!language);
-                }}
-                className="flex items-center gap-1 hover:text-[#D3123E] transition bg-gray-100 p-2 rounded-full cursor-pointer"
-              >
-                <MdLanguage className='text-base lg:text-xl' />
-              </button>
-            ) : (
-              <button
-                onClick={() => {
-                  i18n.changeLanguage('bn');
-                  setLanguage(!language);
-                }}
-                className="flex items-center gap-1 hover:text-[#D3123E] transition bg-gray-100 p-2 rounded-full cursor-pointer"
-              >
-                <MdLanguage className='text-base lg:text-xl' />
-              </button>
-            )
-          }
-
-          {
-            language ? <p className='font-medium'>En</p> : <p className='font-medium'>Bn</p>
-          }
+          <button
+            onClick={() => {
+              const newLang = i18n.language === 'en' ? 'bn' : 'en';
+              i18n.changeLanguage(newLang);
+            }}
+            className="flex items-center gap-1 hover:text-[#D3123E] transition bg-gray-100 p-2 rounded-full cursor-pointer"
+          >
+            <MdLanguage className="text-base lg:text-xl" />
+            <span className="font-medium">
+              {i18n.language === 'en' ? 'BN' : 'EN'}
+            </span>
+          </button>
         </div>
 
         {/* Login/Logout*/}
-        <Link to={'/login'} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-1 px-3 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('login')}</Link>
+        <Link to={'/login'} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-2 px-4 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('login')}</Link>
       </div>
     </div >
   );

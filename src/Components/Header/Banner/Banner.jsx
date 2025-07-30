@@ -1,5 +1,4 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router';
 import slider1 from '../../../../src/assets/images/slider1.jpg';
@@ -29,7 +28,7 @@ const Banner = () => {
         disableOnInteraction: false,
       }}
       modules={[Pagination, Autoplay]}
-      className="mySwiper w-full h-[280px] lg:h-[600px]"
+      className="mySwiper w-full h-[280px] lg:h-[550px]"
     >
 
       {/* Slider-1 */}
@@ -52,8 +51,8 @@ const Banner = () => {
               </p>
             </div>
 
-            <Link to={'/availableFoods'}>
-              <button className="bg-[#D3123E] text-white font-medium rounded hover:bg-[#404042]  px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
+            <Link to={'/bookParcel'}>
+              <button className="bg-[#D3123E] text-white font-medium rounded-md hover:bg-white hover:text-black  px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
                 {t('sliderButton1')}
               </button>
             </Link>
@@ -82,8 +81,8 @@ const Banner = () => {
               </p>
             </div>
 
-            <Link to={'/addFood'}>
-              <button className="bg-[#D3123E] text-white font-medium rounded hover:bg-[#404042] px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
+            <Link to={'/trackParcel'}>
+              <button className="bg-[#D3123E] text-white font-medium rounded-md hover:bg-white hover:text-black px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
                 {t('sliderButton2')}
               </button>
             </Link>
@@ -112,8 +111,8 @@ const Banner = () => {
               </p>
             </div>
 
-            <Link to={'/myFoodRequest'}>
-              <button className="bg-[#D3123E] text-white font-medium rounded hover:bg-[#404042] px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
+            <Link to={'/beADeliveryAgent'}>
+              <button className="bg-[#D3123E] text-white font-medium rounded-md hover:bg-white hover:text-black px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm lg:text-lg">
                 {t('beADeliveryAgent')}
               </button>
             </Link>
