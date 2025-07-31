@@ -8,9 +8,14 @@ import BeADeliveryAgent from "../Pages/BeADeliveryAgent/BeADeliveryAgent";
 import AssignedParcels from "../Pages/AssignedParcels/AssignedParcels";
 import UpdateStatus from "../Pages/UpdateStatus/updateStatus";
 import DeliveryRoute from "../Pages/DeliveryRoute/DeliveryRoute";
+import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 
 export const router = createBrowserRouter([
+
+  // Main Layout
   {
     path: "/",
     element: <MainLayout></MainLayout>,
@@ -46,6 +51,22 @@ export const router = createBrowserRouter([
       {
         path: 'deliveryRoute',
         element: <DeliveryRoute></DeliveryRoute>
+      }
+    ]
+  },
+
+  // Auth Layout
+  {
+    path: '/',
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: 'login',
+        element: <Login></Login>
+      },
+      {
+        path: 'register',
+        element: <Register></Register>
       }
     ]
   }
