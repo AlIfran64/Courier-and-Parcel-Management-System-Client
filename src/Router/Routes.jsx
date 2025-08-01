@@ -11,6 +11,7 @@ import DeliveryRoute from "../Pages/DeliveryRoute/DeliveryRoute";
 import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoutes from '../../src/Router/PrivateRoutes';
 
 
 export const router = createBrowserRouter([
@@ -26,19 +27,31 @@ export const router = createBrowserRouter([
       },
       {
         path: 'bookParcel',
-        element: <BookParcel></BookParcel>
+        element:
+          <PrivateRoutes>
+            <BookParcel></BookParcel>
+          </PrivateRoutes>
       },
       {
         path: 'bookingHistory',
-        element: <BookingHistory></BookingHistory>
+        element:
+          <PrivateRoutes>
+            <BookingHistory></BookingHistory>
+          </PrivateRoutes>
       },
       {
         path: 'trackParcel',
-        element: <TrackParcel></TrackParcel>
+        element:
+          <PrivateRoutes>
+            <TrackParcel></TrackParcel>
+          </PrivateRoutes>
       },
       {
         path: 'beADeliveryAgent',
-        element: <BeADeliveryAgent></BeADeliveryAgent>
+        element:
+          <PrivateRoutes>
+            <BeADeliveryAgent></BeADeliveryAgent>
+          </PrivateRoutes>
       },
       {
         path: 'assignedParcels',

@@ -3,11 +3,36 @@ import { Link, NavLink } from 'react-router';
 import logo from '../../../../src/assets/images/Transparent logo.png';
 import { useTranslation } from 'react-i18next';
 import { MdLanguage } from 'react-icons/md';
+import useAuth from '../../../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
 
   const { t, i18n } = useTranslation();
+  const { user, logout } = useAuth();
+
+  // handle logout
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Log Out Successful',
+          icon: 'success',
+          confirmButtonColor: '#D3123E',
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: 'Error!',
+          text: `${error}`,
+          icon: 'error',
+          confirmButtonColor: '#D3123E',
+        });
+      });
+  };
+
 
   const links = <>
 
@@ -44,10 +69,12 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className='flex items-center gap-2'>
+
+        {/* logo */}
+        <Link className='flex items-center gap-1' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img className='w-4 h-6 lg:w-6 lg:h-8' src={logo} alt="logo" />
-          <Link className="font-semibold text-lg lg:text-2xl">Go<span className='text-[#CE133D]'><i>Quick</i></span></Link>
-        </div>
+          <div className="font-semibold text-lg lg:text-2xl">Go<span className='text-[#CE133D]'><i>Quick</i></span></div>
+        </Link>
       </div>
 
       {/* For desktop */}
@@ -56,7 +83,7 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end space-x-3 lg:space-x-6">
+      <div className="navbar-end space-x-1.5 lg:space-x-3">
 
         {/* Language Toggle */}
         <div className="flex gap-1 items-center">
@@ -65,7 +92,7 @@ const Navbar = () => {
               const newLang = i18n.language === 'en' ? 'bn' : 'en';
               i18n.changeLanguage(newLang);
             }}
-            className="flex items-center gap-1 hover:text-[#D3123E] transition bg-gray-100 p-2 rounded-full cursor-pointer"
+            className="flex items-center gap-1 hover:text-[#D3123E] transition bg-gray-100 p-1 lg:p-2 rounded-full cursor-pointer"
           >
             <MdLanguage className="text-base lg:text-xl" />
             <span className="font-medium">
@@ -75,7 +102,11 @@ const Navbar = () => {
         </div>
 
         {/* Login/Logout*/}
-        <Link to={'/login'} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-2 px-4 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('login')}</Link>
+
+        {
+          user ? (<button onClick={() => handleLogout()} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-1 px-4 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('logout')}</button>) : (<Link to={'/login'} className="w-[60px] lg:w-[100px] flex justify-center items-center text-sm lg:text-base py-1 px-4 lg:py-1.5 lg:px-6 border-2 border-[#D3123E] text-[#D3123E] font-semibold rounded-md hover:bg-[#D3123E] hover:text-white cursor-pointer">{t('login')}</Link>)
+        }
+
       </div>
     </div >
   );

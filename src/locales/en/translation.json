@@ -18,5 +18,71 @@
   "sliderSubHeading3": "Connect, track, and deliver — all in one powerful courier platform built for modern logistics.",
   "sliderButton3": "Track Now",
   "footerDescription": "GoQuick is your smart solution for fast, secure, and reliable courier services. From easy parcel bookings to real-time delivery tracking, we ensure convenience at every step. Trusted by individuals and businesses across the country.",
-  "allRightsReserved": "All rights reserved by"
+  "allRightsReserved": "All rights reserved by",
+
+  "title": "Welcome Back!",
+  "subtitle": "Manage and track your parcels easily",
+  "email": "Email",
+  "password": "Password",
+  "loginBtn": "Login",
+  "or": "OR",
+  "googleLogin": "Continue with Google",
+  "noAccount": "Don’t have an account?",
+  "register": "Register",
+  "emailRequired": "Email is required",
+  "passwordRequired": "Password is required",
+
+  "title2": "Create Account",
+  "subtitle2": "Register to manage your parcels effortlessly",
+  "fullName": "Full Name",
+  "registerBtn": "Register",
+  "alreadyAccount": "Already have an account?",
+  "login2": "Login",
+  "name": "Enter your name",
+  "invalidEmail": "Invalid email address",
+  "passwordMinLength": "At least 6 characters",
+  "passwordUppercase": "Must include an uppercase letter",
+  "passwordLowercase": "Must include a lowercase letter",
+  "logout": "Logout",
+
+  "delivering_title": "Your Package, Delivered with Speed & Care",
+  "delivering_subtitle": "GoQuick is your trusted partner for quick, secure, and efficient courier and parcel services across the country. Whether you're sending a small gift or a business shipment — we handle it all with precision.",
+  "delivering_image_alt": "Delivering Nationwide",
+
+  "why_choose_title": "Why Choose GoQuick",
+  "why_choose_subtitle": "Discover how GoQuick stands out in speed, security, and service across the nation.",
+  "feature_fast_delivery_title": "Super-Fast Delivery",
+  "feature_fast_delivery_desc": "We ensure your parcels arrive on time — every time.",
+  "feature_tracking_title": "Real-Time Tracking",
+  "feature_tracking_desc": "Stay updated with live parcel tracking right from pickup to doorstep.",
+  "feature_corporate_title": "Corporate Solutions",
+  "feature_corporate_desc": "Reliable logistics tailored for your business needs.",
+  "feature_security_title": "Safe & Secure",
+  "feature_security_desc": "Your package is our priority. Safe handling, every step of the way.",
+
+  "our_services_title": "Our Services",
+  "our_services_subtitle": "We deliver more than parcels — trust, speed, and satisfaction.",
+  "fast_delivery": "Fastest Delivery",
+  "fast_delivery_desc": "We ensure your parcel reaches its destination on time — every time.",
+  "real_time_tracking": "Real-Time Tracking",
+  "real_time_tracking_desc": "Stay updated with live tracking from pickup to delivery.",
+  "corporate_solutions": "Corporate Solutions",
+  "corporate_solutions_desc": "Reliable logistics service tailored for your business.",
+  "safe_secure": "Safe & Secure",
+  "safe_secure_desc": "Your parcel is our priority. Handled securely at every step.",
+
+  "customer_testimonials_title": "Customer Testimonials",
+  "customer_testimonials_subtitle": "Hear what our satisfied customers say about GoQuick’s exceptional logistics services.",
+
+  "john_name": "John Doe",
+  "john_review": "GoQuick’s service is exceptionally fast and reliable. From the moment I schedule a shipment until it reaches the destination, everything is handled professionally and with great care.",
+
+  "maria_name": "Maria Rodriguez",
+  "maria_review": "Excellent customer support, prompt and timely delivery every time. GoQuick truly cares about its customers and ensures parcels arrive safely. Highly recommended for reliable service!",
+
+  "ahmed_name": "Ahmed Khan",
+  "ahmed_review": "Secure handling and professional logistics have always ensured my shipments arrive safely and on time. GoQuick truly is a reliable partner for my business growth.",
+
+  "sophia_name": "Sophia Lee",
+  "sophia_review": "The user-friendly platform makes shipping easy and hassle-free. I appreciate the seamless experience and consistent on-time delivery. GoQuick truly simplifies my logistics needs."
 }
