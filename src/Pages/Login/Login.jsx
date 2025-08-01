@@ -52,21 +52,37 @@ const Login = () => {
       });
   };
 
+  // Handle google login
   const handleGoogleLogin = () => {
-
     googleLogin()
       .then(async (result) => {
         const user = result.user;
 
-        // Update user info in db
         const userGoogleInfo = {
           name: user.displayName,
           email: user.email,
           role: 'customer',
           createdAt: new Date().toISOString()
-        }
+        };
 
-        const userRes = await axiosInstance.post('/users', userGoogleInfo);
+        try {
+          await axiosInstance.post('/users', userGoogleInfo);
+          // New user created
+        } catch (error) {
+          if (error.response?.status === 409) {
+            // User already exists — that's fine, just proceed
+            console.log('User already exists in DB.');
+          } else {
+            // Unexpected error — show error and return
+            Swal.fire({
+              title: 'Error!',
+              text: 'Failed to update user info. Please try again later.',
+              icon: 'error',
+              confirmButtonColor: '#D3123E',
+            });
+            return;
+          }
+        }
 
         Swal.fire({
           title: 'Success!',
@@ -75,16 +91,15 @@ const Login = () => {
           confirmButtonColor: '#D3123E',
         });
         navigate(from);
-      }).catch((error) => {
-        const errorMessage = error.message;
+      })
+      .catch((error) => {
         Swal.fire({
           title: 'Error!',
-          text: `${errorMessage}`,
+          text: error.message,
           icon: 'error',
           confirmButtonColor: '#D3123E',
         });
       });
-
   };
 
   return (

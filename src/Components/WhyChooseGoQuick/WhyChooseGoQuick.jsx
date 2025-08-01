@@ -29,7 +29,7 @@ const WhyChooseGoQuick = () => {
   ];
 
   return (
-    <section className="w-11/12 mx-auto my-10 md:my-24 text-center">
+    <section data-aos="fade-right" className="w-11/12 mx-auto my-10 md:my-24 text-center">
       <h1 className="text-3xl font-extrabold text-gray-900 mb-3 relative inline-block">
         {t('why_choose_title', 'Why Choose GoQuick')}
       </h1>

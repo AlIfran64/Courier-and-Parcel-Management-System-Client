@@ -84,5 +84,31 @@
   "ahmed_review": "নিরাপদ পরিচালনা এবং পেশাদার লজিস্টিক নিশ্চিত করে আমার চালানগুলি নিরাপদে এবং সময়মতো পৌঁছায়। GoQuick আমার ব্যবসায় বৃদ্ধির নির্ভরযোগ্য অংশীদার।",
 
   "sophia_name": "সোফিয়া লি",
-  "sophia_review": "ব্যবহার-বান্ধব প্ল্যাটফর্ম শিপিংকে সহজ ও ঝামেলামুক্ত করে তোলে। আমি মসৃণ অভিজ্ঞতা এবং সময়মতো ডেলিভারির জন্য GoQuick-কে সত্যিই কৃতজ্ঞ।"
+  "sophia_review": "ব্যবহার-বান্ধব প্ল্যাটফর্ম শিপিংকে সহজ ও ঝামেলামুক্ত করে তোলে। আমি মসৃণ অভিজ্ঞতা এবং সময়মতো ডেলিভারির জন্য GoQuick-কে সত্যিই কৃতজ্ঞ।",
+
+  "Book Parcel": "পার্সেল বুক করুন",
+  "Fill out the form below to schedule your pickup and delivery in just a few clicks.": "আপনার পিকআপ এবং ডেলিভারি কয়েকটি ক্লিকে নির্ধারণ করতে নিচের ফর্ম পূরণ করুন।",
+  "Your Name": "আপনার নাম",
+  "Your Email": "আপনার ইমেইল",
+  "Pickup Address": "পিকআপ ঠিকানা",
+  "Pickup Address is required": "পিকআপ ঠিকানা আবশ্যক",
+  "Delivery Address": "ডেলিভারি ঠিকানা",
+  "Delivery Address is required": "ডেলিভারি ঠিকানা আবশ্যক",
+  "Parcel Size": "পার্সেলের আকার",
+  "Select size": "আকার নির্বাচন করুন",
+  "Small (Up to 1kg)": "ছোট (১ কেজি পর্যন্ত)",
+  "Medium (1-5kg)": "মাঝারি (১-৫ কেজি)",
+  "Large (5-20kg)": "বড় (৫-২০ কেজি)",
+  "Extra Large (20kg+)": "অতিরিক্ত বড় (২০ কেজির বেশি)",
+  "Parcel Size is required": "পার্সেলের আকার আবশ্যক",
+  "Payment Type": "পেমেন্টের ধরন",
+  "Select payment type": "পেমেন্টের ধরন নির্বাচন করুন",
+  "Cash on Delivery": "ক্যাশ অন ডেলিভারি",
+  "Prepaid": "প্রিপেইড",
+  "Payment type is required": "পেমেন্টের ধরন আবশ্যক",
+  "Book Now": "এখন বুক করুন",
+  "Success!": "সফল!",
+  "Your parcel has been booked.": "আপনার পার্সেল বুক হয়েছে।",
+  "Oops...": "ওহ...",
+  "Something went wrong!": "কিছু ভুল হয়েছে!"
 }

@@ -6,7 +6,7 @@ const DeliveringNationwide = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-11/12 mx-auto my-10 md:my-24">
+    <div data-aos="fade-up" className="w-11/12 mx-auto my-10 md:my-24">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-5">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
@@ -22,7 +22,7 @@ const DeliveringNationwide = () => {
         </div>
 
         {/* Right Image */}
-        <div className="w-full lg:w-1/2 bg-[#d3123f] px-8 rounded-2xl shadow-2xl">
+        <div className="w-full lg:w-1/2">
           <img
             className="w-full object-cover"
             src={deliveringNation}

@@ -34,17 +34,17 @@ const CustomerTestimonials = () => {
     ],
     arrows: false,
     dots: true,
-    dotsClass: 'slick-dots custom-dots !bottom-[-30px]',
+    dotsClass: 'slick-dots custom-dots',
   };
 
   return (
-    <section className="w-11/12 mx-auto my-10 md:my-24">
+    <section data-aos="fade-left" className="w-11/12 mx-auto my-10 md:my-24">
       {/* Section Header */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl font-extrabold text-gray-800">
           {t('customer_testimonials_title', 'Customer Testimonials')}
         </h2>
-        <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+        <p className="mt-3 text-lg text-gray-600 max-w-xl mx-auto">
           {t(
             'customer_testimonials_subtitle',
             'Hear what our satisfied customers say about GoQuick’s exceptional logistics services.'

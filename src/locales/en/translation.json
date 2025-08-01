@@ -84,5 +84,31 @@
   "ahmed_review": "Secure handling and professional logistics have always ensured my shipments arrive safely and on time. GoQuick truly is a reliable partner for my business growth.",
 
   "sophia_name": "Sophia Lee",
-  "sophia_review": "The user-friendly platform makes shipping easy and hassle-free. I appreciate the seamless experience and consistent on-time delivery. GoQuick truly simplifies my logistics needs."
+  "sophia_review": "The user-friendly platform makes shipping easy and hassle-free. I appreciate the seamless experience and consistent on-time delivery. GoQuick truly simplifies my logistics needs.",
+
+  "Book Parcel": "Book Parcel",
+  "Fill out the form below to schedule your pickup and delivery in just a few clicks.": "Fill out the form below to schedule your pickup and delivery in just a few clicks.",
+  "Your Name": "Your Name",
+  "Your Email": "Your Email",
+  "Pickup Address": "Pickup Address",
+  "Pickup Address is required": "Pickup Address is required",
+  "Delivery Address": "Delivery Address",
+  "Delivery Address is required": "Delivery Address is required",
+  "Parcel Size": "Parcel Size",
+  "Select size": "Select size",
+  "Small (Up to 1kg)": "Small (Up to 1kg)",
+  "Medium (1-5kg)": "Medium (1-5kg)",
+  "Large (5-20kg)": "Large (5-20kg)",
+  "Extra Large (20kg+)": "Extra Large (20kg+)",
+  "Parcel Size is required": "Parcel Size is required",
+  "Payment Type": "Payment Type",
+  "Select payment type": "Select payment type",
+  "Cash on Delivery": "Cash on Delivery",
+  "Prepaid": "Prepaid",
+  "Payment type is required": "Payment type is required",
+  "Book Now": "Book Now",
+  "Success!": "Success!",
+  "Your parcel has been booked.": "Your parcel has been booked.",
+  "Oops...": "Oops...",
+  "Something went wrong!": "Something went wrong!"
 }

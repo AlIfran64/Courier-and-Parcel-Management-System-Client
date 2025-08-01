@@ -8,6 +8,7 @@ const OurServices = () => {
 
   return (
     <div
+      data-aos="zoom-in"
       className="w-11/12 mx-auto my-10 md:my-24 relative bg-cover bg-center rounded-2xl overflow-hidden text-white"
       style={{
         backgroundImage: `url(${services})`,
