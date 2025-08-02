@@ -6,6 +6,8 @@ import { router } from './Router/Routes';
 import './i18n';
 import AuthProvider from './Context/Auth/AuthProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import 'leaflet/dist/leaflet.css';
+
 
 const queryClient = new QueryClient();
 

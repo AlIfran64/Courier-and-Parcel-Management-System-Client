@@ -47,7 +47,7 @@ const BookParcel = () => {
   };
 
   return (
-    <div className='w-11/12 max-w-4xl mx-auto my-10 md:my-24 bg-white rounded-2xl shadow-2xl p-8'>
+    <div className='w-11/12 mx-auto my-10 md:my-24 bg-white rounded-2xl shadow-2xl p-8'>
       <h1 className='text-3xl md:text-4xl font-bold mb-2'>{t('Book Parcel')}</h1>
       <p className='text-gray-600 mb-6'>{t('Fill out the form below to schedule your pickup and delivery in just a few clicks.')}</p>
 

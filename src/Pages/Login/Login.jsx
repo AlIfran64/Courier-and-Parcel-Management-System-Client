@@ -104,7 +104,7 @@ const Login = () => {
 
   return (
     <div
-      className="relative py-10 flex items-center justify-center px-4"
+      className="relative py-10 flex items-center justify-center px-4 min-h-screen"
       style={{
         backgroundImage: `url(${authBg})`,
         backgroundSize: 'cover',

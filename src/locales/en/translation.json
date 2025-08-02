@@ -110,5 +110,18 @@
   "Success!": "Success!",
   "Your parcel has been booked.": "Your parcel has been booked.",
   "Oops...": "Oops...",
-  "Something went wrong!": "Something went wrong!"
+  "Something went wrong!": "Something went wrong!",
+
+  "Booking History": "Booking History",
+  "Track your parcel bookings and delivery statuses in real time": "Track your parcel bookings and delivery statuses in real time",
+  "Loading...": "Loading...",
+  "No bookings found.": "No bookings found.",
+  "Pickup": "Pickup",
+  "Delivery": "Delivery",
+  "Size": "Size",
+  "Payment": "Payment",
+  "Status": "Status",
+
+  "Track_Your_Parcel": "Track your parcel",
+  "Track_Parcel_Tile": "Track customer parcels in real-time on a map using Leaflet"
 }

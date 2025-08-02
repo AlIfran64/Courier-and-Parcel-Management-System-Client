@@ -110,5 +110,18 @@
   "Success!": "সফল!",
   "Your parcel has been booked.": "আপনার পার্সেল বুক হয়েছে।",
   "Oops...": "ওহ...",
-  "Something went wrong!": "কিছু ভুল হয়েছে!"
+  "Something went wrong!": "কিছু ভুল হয়েছে!",
+
+  "Booking History": "বুকিং ইতিহাস",
+  "Track your parcel bookings and delivery statuses in real time": "রিয়েল টাইমে আপনার পার্সেল বুকিং এবং ডেলিভারি স্ট্যাটাস ট্র্যাক করুন",
+  "Loading...": "লোড হচ্ছে...",
+  "No bookings found.": "কোনো বুকিং পাওয়া যায়নি।",
+  "Pickup": "পিকআপ",
+  "Delivery": "ডেলিভারি",
+  "Size": "আকার",
+  "Payment": "পেমেন্ট",
+  "Status": "স্ট্যাটাস",
+
+  "Track_Your_Parcel": "আপনার পার্সেল ট্র্যাক করুন",
+  "Track_Parcel_Tile": "লিফলেট ব্যবহার করে মানচিত্রে রিয়েল-টাইমে গ্রাহক পার্সেল ট্র্যাক করুন"
 }

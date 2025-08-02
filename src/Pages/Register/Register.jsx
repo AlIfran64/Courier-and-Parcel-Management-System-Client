@@ -77,7 +77,7 @@ const Register = () => {
 
   return (
     <div
-      className="py-10 px-4 flex items-center justify-center bg-cover bg-center relative"
+      className="py-10 px-4 flex items-center justify-center bg-cover bg-center relative min-h-screen"
       style={{ backgroundImage: `url(${authBg})` }}
     >
 
