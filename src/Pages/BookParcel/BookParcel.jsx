@@ -28,7 +28,8 @@ const BookParcel = () => {
         icon: 'success',
         title: t('Success!'),
         text: t('Your parcel has been booked.'),
-        confirmButtonColor: '#D3123E'
+        confirmButtonColor: '#D3123E',
+        confirmButtonText: `${t('ok')}`
       });
       reset();
     },
@@ -37,7 +38,8 @@ const BookParcel = () => {
         icon: 'error',
         title: t('Oops...'),
         text: t('Something went wrong!'),
-        confirmButtonColor: '#D3123E'
+        confirmButtonColor: '#D3123E',
+        confirmButtonText: `${t('ok')}`
       });
     },
   });
@@ -132,7 +134,7 @@ const BookParcel = () => {
         <div className='md:col-span-2'>
           <button
             type='submit'
-            className='w-full bg-[#D3123E] hover:bg-[#b20f35] transition-colors duration-300 text-white font-semibold py-3 rounded-lg'
+            className='w-full bg-[#D3123E] hover:bg-[#b20f35] transition-colors duration-300 text-white font-semibold py-3 rounded-lg cursor-pointer'
           >
             {t('Book Now')}
           </button>

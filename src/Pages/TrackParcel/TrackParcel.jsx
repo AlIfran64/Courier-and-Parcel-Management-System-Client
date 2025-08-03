@@ -72,8 +72,8 @@ const TrackParcel = () => {
     }
   });
 
-  if (isLoading) return <Loading />;
-  if (error) return <p className="text-center text-red-600">Error fetching parcels</p>;
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <p className="text-center text-red-600">{t('error_fetching_parcel')}</p>;
 
   return (
     <div className="w-11/12 mx-auto my-10 md:my-24 p-6 bg-white rounded-2xl shadow-2xl">

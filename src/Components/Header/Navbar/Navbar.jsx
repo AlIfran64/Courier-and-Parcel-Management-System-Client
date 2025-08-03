@@ -45,13 +45,13 @@ const Navbar = () => {
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/beADeliveryAgent'}>{t('beADeliveryAgent')}</NavLink>
 
     {/* Delivery agent routes */}
-    {/* <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/assignedParcels'}>Assigned Parcels</NavLink>
+    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/assignedParcels'}>Assigned Parcels</NavLink>
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/updateStatus'}>Update Status</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Delivery Route</NavLink> 
-    
-    // Admin Routes
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Dashboard</NavLink>
-    */}
+    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Delivery Route</NavLink>
+
+    {/* Admin routes */}
+    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/dashboard'}>{t('dashboard')}</NavLink>
+
   </>
 
   return (

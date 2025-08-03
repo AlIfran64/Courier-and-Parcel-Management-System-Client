@@ -3,9 +3,8 @@ import { useTranslation } from 'react-i18next';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import useAuth from '../../Hooks/useAuth';
 import { useQueryClient, useQuery } from '@tanstack/react-query';
-import io from 'socket.io-client';
-
-const socket = io('http://localhost:3000');
+import Loading from '../../Components/Loading/Loading';
+import socket from '../../utils/socket';
 
 const BookingHistory = () => {
   const { t } = useTranslation();
@@ -13,7 +12,7 @@ const BookingHistory = () => {
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
-  const { data: bookings = [], isLoading } = useQuery({
+  const { data: bookings = [], isLoading, error } = useQuery({
     queryKey: ['booking-history', user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/parcels?email=${user?.email}`);
@@ -30,6 +29,9 @@ const BookingHistory = () => {
 
     return () => socket.off('status-updated');
   }, [queryClient, user?.email]);
+
+  if (isLoading) return <Loading></Loading>;
+  if (error) return <p className="text-center text-red-600">Error fetching parcels</p>;
 
   return (
     <div className="w-11/12 mx-auto my-10 md:my-20 p-6 bg-white shadow-2xl rounded-xl">

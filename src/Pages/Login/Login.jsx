@@ -34,20 +34,22 @@ const Login = () => {
         const user = userCredential.user;
 
         Swal.fire({
-          title: 'Success!',
-          text: 'You have logged in successfully.',
+          title: `${t('success')}`,
+          text: `${t('You_have_logged_in_successfully')}`,
           icon: 'success',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
         navigate(from);
       })
       .catch((error) => {
         const errorMessage = error.message;
         Swal.fire({
-          title: 'Error!',
+          title: `${t('error')}`,
           text: `${errorMessage}`,
           icon: 'error',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
       });
   };
@@ -75,29 +77,32 @@ const Login = () => {
           } else {
             // Unexpected error — show error and return
             Swal.fire({
-              title: 'Error!',
-              text: 'Failed to update user info. Please try again later.',
+              title: `${t('error')}`,
+              text: `${t('update_failed')}`,
               icon: 'error',
               confirmButtonColor: '#D3123E',
+              confirmButtonText: `${t('ok')}`
             });
             return;
           }
         }
 
         Swal.fire({
-          title: 'Success!',
-          text: 'You have logged in successfully.',
+          title: `${t('success')}`,
+          text: `${t('You_have_logged_in_successfully')}`,
           icon: 'success',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
         navigate(from);
       })
       .catch((error) => {
         Swal.fire({
-          title: 'Error!',
+          title: `${t('error')}`,
           text: error.message,
           icon: 'error',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
       });
   };

@@ -48,28 +48,31 @@ const Register = () => {
           })
           .catch((error) => {
             Swal.fire({
-              title: 'Error!',
+              title: `${t('error')}`,
               text: `${error}`,
               icon: 'error',
               confirmButtonColor: '#D3123E',
+              confirmButtonText: `${t('ok')}`
             });
           })
 
         Swal.fire({
-          title: 'Success!',
-          text: 'You have registered successfully.',
+          title: `${t('success')}`,
+          text: `${t('You_have_registered_successfully')}`,
           icon: 'success',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
         navigate(from);
       })
       .catch((error) => {
         const errorMessage = error.message;
         Swal.fire({
-          title: 'Error!',
+          title: `${t('error')}`,
           text: `${errorMessage}`,
           icon: 'error',
           confirmButtonColor: '#D3123E',
+          confirmButtonText: `${t('ok')}`
         });
       });
 
@@ -123,7 +126,6 @@ const Register = () => {
             )}
           </div>
 
-          {/* Password */}
           {/* Password */}
           <div className="mb-6 relative">
             <label className="block text-sm font-medium text-gray-700 mb-1">{t('password')}</label>

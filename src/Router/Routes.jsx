@@ -12,7 +12,12 @@ import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoutes from '../../src/Router/PrivateRoutes';
-
+import DashboardLayout from "../Layouts/DashboardLayout/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import DeliveryAgentReq from '../Pages/DeliveryAgentReq/DeliveryAgentReq';
+import AssignAgentsToParcels from "../Pages/AssignAgentsToParcels/AssignAgentsToParcels";
+import Reports from "../Pages/Reports/Reports";
+import DashboardRedirect from "../Pages/DashboardRedirect/DashboardRedirect";
 
 export const router = createBrowserRouter([
 
@@ -80,6 +85,34 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      }
+    ]
+  },
+
+  // Dashboard Layout
+  {
+    path: '/dashboard',
+    element: <DashboardLayout></DashboardLayout>,
+    children: [
+      {
+        index: true,
+        element: <DashboardRedirect></DashboardRedirect>
+      },
+      {
+        path: 'dash',
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: 'agentRequests',
+        element: <DeliveryAgentReq></DeliveryAgentReq>
+      },
+      {
+        path: 'assignAgents',
+        element: <AssignAgentsToParcels></AssignAgentsToParcels>
+      },
+      {
+        path: 'reports',
+        element: <Reports></Reports>
       }
     ]
   }
