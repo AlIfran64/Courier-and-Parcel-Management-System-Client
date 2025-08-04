@@ -83,46 +83,52 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 
 ## Client-Side Access Guide
 
-###Setup Instructions
+### Setup Instructions
 
 1. **Clone the Repository**
-- git clone https://github.com/your-repo-name.git
-- cd your-repo-name
+
+```
+git clone https://github.com/your-repo-name.git
+cd your-repo-name
+```
 
 2. **Install dependency**
-- npm install
+```
+npm install
+```
 
-2. **Firebase Configuration**
+3. **Firebase Configuration**
 -Create a Firebase project.
 -Enable Email/Password authentication.
--Set up Firestore Database (if used).
 -Copy your Firebase config and update the environment file.
 
-3. **Create .env.local File**
-4. **Start the Development Server**
-- npm run dev
+4. **Create .env.local File**
+5. **Start the Development Server**
+```
+npm run dev
+```
 
 
-###User Flow
+### User Flow
 
 1. Customer Registration
-Visit the app and register using your email and password.
-After successful registration, the user is redirected to the home page.
-Customers can book parcels, view history, and track parcels.
+-Visit the app and register using your email and password.
+-After successful registration, the user is redirected to the home page.
+-Customers can book parcels, view history, and track parcels.
 
 2. Apply as Delivery Agent
-On the home page, customers can apply to become a delivery agent.
-This request goes to the Admin for review.
+-On the home page, customers can apply to become a delivery agent.
+-This request goes to the Admin for review.
 
 3. Admin Access
-Login using Admin credentials.
-Navigate to Agent Requests.
-Accept or reject delivery agent applications.
-Assign available parcels to approved agents.
+-Login using Admin credentials.
+-Navigate to Agent Requests.
+-Accept or reject delivery agent applications.
+-Assign available parcels to approved agents.
 
 4. Delivery Agent Access
-Once approved, the agent can log in using their credentials.
-Agents can view assigned parcels and update delivery statuses.
+-Once approved, the agent can log in using their credentials.
+-Agents can view assigned parcels and update delivery statuses.
 
 
 
