@@ -88,7 +88,7 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 1. **Clone the Repository**
 
 ```
-git clone [https://github.com/your-repo-name.git](https://github.com/AlIfran64/Courier-and-Parcel-Management-System-Client.git)
+git clone https://github.com/AlIfran64/Courier-and-Parcel-Management-System-Client.git
 cd your-repo-name
 ```
 
