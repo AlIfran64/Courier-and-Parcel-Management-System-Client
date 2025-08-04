@@ -88,7 +88,7 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 1. **Clone the Repository**
 
 ```
-git clone https://github.com/your-repo-name.git
+git clone [https://github.com/your-repo-name.git](https://github.com/AlIfran64/Courier-and-Parcel-Management-System-Client.git)
 cd your-repo-name
 ```
 
@@ -108,6 +108,7 @@ npm install
 npm run dev
 ```
 
+---
 
 ### User Flow
 
@@ -122,13 +123,14 @@ npm run dev
 
 3. **Admin Access**
 - Login using Admin credentials.
-- Navigate to Agent Requests.
+- Navigate to Delivery Agent Requests.
 - Accept or reject delivery agent applications.
 - Assign available parcels to approved agents.
+- Export reports as PDF and dashboard view
 
 4. **Delivery Agent Access**
 - Once approved, the agent can log in using their credentials.
-- Agents can view assigned parcels and update delivery statuses.
+- Delivery Agents can view assigned parcels, delivery route, and update delivery statuses.
 
 
 
