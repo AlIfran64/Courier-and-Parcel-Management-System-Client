@@ -7,17 +7,17 @@ Welcome to **GoQuick**, a full-featured MERN stack application designed to strea
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 GoQuick simplifies courier and parcel operations by enabling customers to book parcels, delivery agents to update and track deliveries, and admins to manage all aspects via a comprehensive dashboard. This system improves efficiency, transparency, and communication across all user roles.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Customer
 - Secure JWT-based registration and login
-- Parcel booking with pickup/delivery addresses, parcel size/type, and payment method (COD or prepaid)
+- Parcel booking with pickup and delivery addresses, parcel size and type, and payment method (COD or prepaid)
 - Booking history and parcel delivery status views
 - Real-time parcel tracking on interactive Leaflet maps
 
@@ -27,11 +27,15 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 - Optimized delivery routes displayed on Leaflet maps
 
 ### Admin
-- Dashboard with key metrics: daily bookings, failed deliveries, COD payments
+- Dashboard with key metrics: daily bookings, failed deliveries, COD payments, and so on
 - Assign delivery agents to parcels efficiently
 - Manage users and all parcel bookings
-- Export reports in CSV and PDF formats
+- Export reports in PDF format
 - Role-based access control with JWT middleware securing API routes
+
+### Additional Features
+- Email notifications for customers
+- Multi-language support (English & Bengali)
 
 ### Backend
 - RESTful APIs for authentication, CRUD operations, agent assignments, parcel tracking, analytics, and reporting
@@ -46,15 +50,21 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 ### Backend:
 - **Node.js**
 - **Express.js**
-- **MongoDB** & **Mongoose**
+- **MongoDB**
 - **JWT Authentication**
 - **Socket.IO** for real-time communication
-- **bcrypt**, **dotenv**, **cors**
+- **Nodemailer** for email notifications 
 
 ### Frontend:
 - **React.js**
+- **JavaScript**
+- **Tailwind CSS**
+- **Firebase-Auth**
+- **Tanstack Query**
+- **i18n-react** for multi-language support
 - **Leaflet.js** (interactive maps)
 - **Socket.IO-client**
+- **react@pdf/renderer** for export report
 
 ---
 
@@ -64,7 +74,7 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 
 ---
 
-## 🧑‍💼 Admin Credentials (For Demo)
+## Admin Credentials (For Demo)
 
 - Email: alifranrafi64@gmail.com  
 - Password: 1234Asdf
