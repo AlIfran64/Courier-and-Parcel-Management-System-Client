@@ -5,12 +5,16 @@ import { useTranslation } from 'react-i18next';
 import { MdLanguage } from 'react-icons/md';
 import useAuth from '../../../Hooks/useAuth';
 import Swal from 'sweetalert2';
+import useUserRole from '../../../Hooks/useUserRole';
 
 
 const Navbar = () => {
 
   const { t, i18n } = useTranslation();
   const { user, logout } = useAuth();
+  const { role, roleLoading } = useUserRole();
+
+
 
   // handle logout
   const handleLogout = () => {
@@ -39,23 +43,39 @@ const Navbar = () => {
     <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white px-2 py-0.5 rounded-full font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/'}>{t('home')}</NavLink>
 
     {/* Customer Routes */}
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookParcel'}>{t('bookParcel')}</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookingHistory'}>{t('bookingHistory')}</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/trackParcel'}>{t('trackParcel')}</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/beADeliveryAgent'}>{t('beADeliveryAgent')}</NavLink>
+    {
+      !roleLoading && role === "customer" &&
+      <>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookParcel'}>{t('bookParcel')}</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/bookingHistory'}>{t('bookingHistory')}</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/trackParcel'}>{t('trackParcel')}</NavLink>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/beADeliveryAgent'}>{t('beADeliveryAgent')}</NavLink>
+      </>
+    }
+
 
     {/* Delivery agent routes */}
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/assignedParcels'}>Assigned Parcels</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/updateStatus'}>Update Status</NavLink>
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/deliveryRoute'}>Delivery Route</NavLink>
+    {
+      !roleLoading && role === "deliveryAgent" &&
+      <>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/assignedParcels'}>Assigned Parcels</NavLink>
+      </>
+    }
+
 
     {/* Admin routes */}
-    <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/dashboard'}>{t('dashboard')}</NavLink>
+    {
+      !roleLoading && role === "admin" &&
+      <>
+        <NavLink className={({ isActive }) => isActive ? "mx-1 bg-[#D3123E] text-white rounded-full px-2 py-0.5 font-medium" : "mx-1 px-2 py-0.5 font-medium"} to={'/dashboard'}>{t('dashboard')}</NavLink>
+      </>
+    }
+
 
   </>
 
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4 py-2 lg:px-8 lg:py-2 fixed top-0 z-50">
+    <div className="navbar bg-base-100 shadow-sm px-4 py-2 lg:px-8 lg:py-2 fixed top-0 z-2000">
 
       {/* For mobile */}
       <div className="navbar-start">

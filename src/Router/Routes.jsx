@@ -6,8 +6,6 @@ import BookingHistory from "../Pages/BookingHistory/BookingHistory";
 import TrackParcel from "../Pages/TrackParcel/TrackParcel";
 import BeADeliveryAgent from "../Pages/BeADeliveryAgent/BeADeliveryAgent";
 import AssignedParcels from "../Pages/AssignedParcels/AssignedParcels";
-import UpdateStatus from "../Pages/UpdateStatus/updateStatus";
-import DeliveryRoute from "../Pages/DeliveryRoute/DeliveryRoute";
 import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -18,6 +16,11 @@ import DeliveryAgentReq from '../Pages/DeliveryAgentReq/DeliveryAgentReq';
 import AssignAgentsToParcels from "../Pages/AssignAgentsToParcels/AssignAgentsToParcels";
 import Reports from "../Pages/Reports/Reports";
 import DashboardRedirect from "../Pages/DashboardRedirect/DashboardRedirect";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Forbidden from "../Pages/Forbidden/Forbidden";
+import AdminRoutes from "./AdminRoutes";
+import DeliveryAgentRoute from "./DeliveryAgentRoute";
+import CustomerRoutes from "./CustomerRoutes";
 
 export const router = createBrowserRouter([
 
@@ -33,43 +36,48 @@ export const router = createBrowserRouter([
       {
         path: 'bookParcel',
         element:
-          <PrivateRoutes>
-            <BookParcel></BookParcel>
-          </PrivateRoutes>
+          <CustomerRoutes>
+            <PrivateRoutes>
+              <BookParcel></BookParcel>
+            </PrivateRoutes>
+          </CustomerRoutes>
       },
       {
         path: 'bookingHistory',
         element:
-          <PrivateRoutes>
-            <BookingHistory></BookingHistory>
-          </PrivateRoutes>
+          <CustomerRoutes>
+            <PrivateRoutes>
+              <BookingHistory></BookingHistory>
+            </PrivateRoutes>
+          </CustomerRoutes>
       },
       {
         path: 'trackParcel',
         element:
-          <PrivateRoutes>
-            <TrackParcel></TrackParcel>
-          </PrivateRoutes>
+          <CustomerRoutes>
+            <PrivateRoutes>
+              <TrackParcel></TrackParcel>
+            </PrivateRoutes>
+          </CustomerRoutes>
       },
       {
         path: 'beADeliveryAgent',
         element:
-          <PrivateRoutes>
-            <BeADeliveryAgent></BeADeliveryAgent>
-          </PrivateRoutes>
+          <CustomerRoutes>
+            <PrivateRoutes>
+              <BeADeliveryAgent></BeADeliveryAgent>
+            </PrivateRoutes>
+          </CustomerRoutes>
       },
       {
         path: 'assignedParcels',
-        element: <AssignedParcels></AssignedParcels>
+        element:
+          <DeliveryAgentRoute>
+            <PrivateRoutes>
+              <AssignedParcels></AssignedParcels>
+            </PrivateRoutes>
+          </DeliveryAgentRoute>
       },
-      {
-        path: 'updateStatus',
-        element: <UpdateStatus></UpdateStatus>
-      },
-      {
-        path: 'deliveryRoute',
-        element: <DeliveryRoute></DeliveryRoute>
-      }
     ]
   },
 
@@ -92,7 +100,12 @@ export const router = createBrowserRouter([
   // Dashboard Layout
   {
     path: '/dashboard',
-    element: <DashboardLayout></DashboardLayout>,
+    element:
+      <AdminRoutes>
+        <PrivateRoutes>
+          <DashboardLayout></DashboardLayout>
+        </PrivateRoutes>
+      </AdminRoutes>,
     children: [
       {
         index: true,
@@ -115,5 +128,16 @@ export const router = createBrowserRouter([
         element: <Reports></Reports>
       }
     ]
+  },
+
+  // Error Pages
+  {
+    path: '/forbidden',
+    element: <Forbidden></Forbidden>
+  },
+  {
+    path: '*',
+    element: <ErrorPage></ErrorPage>
   }
+
 ]);

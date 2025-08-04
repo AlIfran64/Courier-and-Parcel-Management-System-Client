@@ -58,7 +58,7 @@ const Dashboard = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-6">
+    <div>
       <h1 className="text-2xl font-bold mb-2">{t('dashboard_title') || 'Dashboard'}</h1>
       <p className="text-gray-600 mb-6">{t('dashboard_subtitle')}</p>
 
