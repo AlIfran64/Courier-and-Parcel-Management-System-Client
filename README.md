@@ -98,9 +98,9 @@ npm install
 ```
 
 3. **Firebase Configuration**
--Create a Firebase project.
--Enable Email/Password authentication.
--Copy your Firebase config and update the environment file.
+- Create a Firebase project.
+- Enable Email/Password authentication.
+- Copy your Firebase config and update the environment file.
 
 4. **Create .env.local File**
 5. **Start the Development Server**
@@ -111,24 +111,24 @@ npm run dev
 
 ### User Flow
 
-1. Customer Registration
--Visit the app and register using your email and password.
--After successful registration, the user is redirected to the home page.
--Customers can book parcels, view history, and track parcels.
+1. **Customer Registration**
+- Visit the app and register using your email and password.
+- After successful registration, the user is redirected to the home page.
+- Customers can book parcels, view history, and track parcels.
 
-2. Apply as Delivery Agent
--On the home page, customers can apply to become a delivery agent.
--This request goes to the Admin for review.
+2. **Apply as Delivery Agent**
+- On the home page, customers can apply to become a delivery agent.
+- This request goes to the Admin for review.
 
-3. Admin Access
--Login using Admin credentials.
--Navigate to Agent Requests.
--Accept or reject delivery agent applications.
--Assign available parcels to approved agents.
+3. **Admin Access**
+- Login using Admin credentials.
+- Navigate to Agent Requests.
+- Accept or reject delivery agent applications.
+- Assign available parcels to approved agents.
 
-4. Delivery Agent Access
--Once approved, the agent can log in using their credentials.
--Agents can view assigned parcels and update delivery statuses.
+4. **Delivery Agent Access**
+- Once approved, the agent can log in using their credentials.
+- Agents can view assigned parcels and update delivery statuses.
 
 
 
