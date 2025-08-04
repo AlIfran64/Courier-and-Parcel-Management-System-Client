@@ -1,48 +1,72 @@
-# GoQuick - Courier and Parcel Management System
+# 🚀 GoQuick - Courier and Parcel Management System
 
-[Live Demo](https://goquick-4b7f4.web.app/)
+Welcome to **GoQuick**, a full-featured MERN stack application designed to streamline courier and parcel management for logistics companies, providing a seamless experience for customers, delivery agents, and administrators.
 
----
-
-## Project Overview
-
-GoQuick is a MERN stack application designed to streamline courier and parcel management for logistics companies. It allows customers to book parcels, delivery agents to manage and update delivery statuses, and admins to oversee the entire operation via a comprehensive dashboard.
+## 🔗 Live Demo
+- 🌐 [https://goquick-4b7f4.web.app/](https://goquick-4b7f4.web.app/)
 
 ---
 
-## Features
+## 📌 Project Overview
+
+GoQuick simplifies courier and parcel operations by enabling customers to book parcels, delivery agents to update and track deliveries, and admins to manage all aspects via a comprehensive dashboard. This system improves efficiency, transparency, and communication across all user roles.
+
+---
+
+## ✨ Key Features
 
 ### Customer
-- Register and login with secure JWT authentication
-- Book parcel pickups with details like pickup & delivery address, parcel size/type, and payment method (COD or prepaid)
-- View booking history and parcel delivery statuses
-- Track parcels in real-time on an interactive map
+- Secure JWT-based registration and login
+- Parcel booking with pickup/delivery addresses, parcel size/type, and payment method (COD or prepaid)
+- Booking history and parcel delivery status views
+- Real-time parcel tracking on interactive Leaflet maps
 
 ### Delivery Agent
-- View assigned parcels with details
-- Update parcel status: Picked Up, In Transit, Delivered, or Failed
-- Access optimized delivery routes displayed via Leaflet maps
+- View assigned parcels with detailed info
+- Update parcel statuses: Picked Up, In Transit, Delivered, or Failed
+- Optimized delivery routes displayed on Leaflet maps
 
 ### Admin
-- Dashboard showing key parcel metrics: daily bookings, failed deliveries, COD amounts
-- Assign delivery agents to parcels
-- Manage all users and parcel bookings
-- Export reports in CSV or PDF formats
-- Role-based access control to protect API routes
+- Dashboard with key metrics: daily bookings, failed deliveries, COD payments
+- Assign delivery agents to parcels efficiently
+- Manage users and all parcel bookings
+- Export reports in CSV and PDF formats
+- Role-based access control with JWT middleware securing API routes
 
 ### Backend
-- RESTful APIs for authentication, parcel CRUD operations, agent assignment, parcel status updates, analytics, and reporting
-- Real-time updates with Socket.IO for parcel status changes and tracking
-- Geolocation tracking using coordinate data
-- Secure role-based middleware with JWT authentication
+- RESTful APIs for authentication, CRUD operations, agent assignments, parcel tracking, analytics, and reporting
+- Real-time parcel status updates using Socket.IO
+- Geolocation and coordinate-based tracking
+- Secure role-based middleware protecting routes
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- **Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT, Socket.IO
-- **Frontend:** React.js, Leaflet.js (for maps), Socket.IO-client
-- **Other Tools:** bcrypt, dotenv, cors
+### Backend:
+- **Node.js**
+- **Express.js**
+- **MongoDB** & **Mongoose**
+- **JWT Authentication**
+- **Socket.IO** for real-time communication
+- **bcrypt**, **dotenv**, **cors**
+
+### Frontend:
+- **React.js**
+- **Leaflet.js** (interactive maps)
+- **Socket.IO-client**
 
 ---
 
+## 🔗 Additional Links
+
+- Server-side Repository: [https://github.com/AlIfran64/Courier-and-Parcel-Management-System-Server](https://github.com/AlIfran64/Courier-and-Parcel-Management-System-Server)
+
+---
+
+## 🧑‍💼 Admin Credentials (For Demo)
+
+- Email: alifranrafi64@gmail.com  
+- Password: 1234Asdf
+
+---
