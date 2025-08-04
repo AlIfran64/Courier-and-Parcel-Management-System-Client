@@ -103,13 +103,19 @@ const AssignAgentsToParcels = () => {
                   <td className="p-3">{parcel.deliveryAddress}</td>
                   <td className="p-3">{parcel.status}</td>
                   <td className="p-3 text-center">
+
                     <button
                       className="px-3 py-1 rounded text-white cursor-pointer"
-                      style={{ backgroundColor: '#D3123E' }}
-                      onClick={() => openModal(parcel)}
+                      style={{
+                        backgroundColor: parcel.status === 'Delivered' ? '#aaa' : '#D3123E',
+                        cursor: parcel.status === 'Delivered' ? 'not-allowed' : 'pointer'
+                      }}
+                      onClick={() => parcel.status !== 'Delivered' && openModal(parcel)}
+                      disabled={parcel.status === 'Delivered'}
                     >
                       {t('assign_delivery_agent')}
                     </button>
+
                   </td>
                 </tr>
               ))}

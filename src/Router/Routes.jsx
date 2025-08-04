@@ -36,47 +36,57 @@ export const router = createBrowserRouter([
       {
         path: 'bookParcel',
         element:
-          <CustomerRoutes>
-            <PrivateRoutes>
+
+          <PrivateRoutes>
+            <CustomerRoutes>
               <BookParcel></BookParcel>
-            </PrivateRoutes>
-          </CustomerRoutes>
+            </CustomerRoutes>
+          </PrivateRoutes>
+
       },
       {
         path: 'bookingHistory',
         element:
-          <CustomerRoutes>
-            <PrivateRoutes>
+
+          <PrivateRoutes>
+            <CustomerRoutes>
               <BookingHistory></BookingHistory>
-            </PrivateRoutes>
-          </CustomerRoutes>
+            </CustomerRoutes>
+          </PrivateRoutes>
+
       },
       {
         path: 'trackParcel',
         element:
-          <CustomerRoutes>
-            <PrivateRoutes>
+
+          <PrivateRoutes>
+            <CustomerRoutes>
               <TrackParcel></TrackParcel>
-            </PrivateRoutes>
-          </CustomerRoutes>
+            </CustomerRoutes>
+          </PrivateRoutes>
+
       },
       {
         path: 'beADeliveryAgent',
         element:
-          <CustomerRoutes>
-            <PrivateRoutes>
+
+          <PrivateRoutes>
+            <CustomerRoutes>
               <BeADeliveryAgent></BeADeliveryAgent>
-            </PrivateRoutes>
-          </CustomerRoutes>
+            </CustomerRoutes>
+          </PrivateRoutes >
+
       },
       {
         path: 'assignedParcels',
         element:
-          <DeliveryAgentRoute>
-            <PrivateRoutes>
+
+          <PrivateRoutes>
+            <DeliveryAgentRoute>
               <AssignedParcels></AssignedParcels>
-            </PrivateRoutes>
-          </DeliveryAgentRoute>
+            </DeliveryAgentRoute>
+          </PrivateRoutes>
+
       },
     ]
   },
@@ -101,11 +111,13 @@ export const router = createBrowserRouter([
   {
     path: '/dashboard',
     element:
-      <AdminRoutes>
-        <PrivateRoutes>
+
+      <PrivateRoutes>
+        <AdminRoutes>
           <DashboardLayout></DashboardLayout>
-        </PrivateRoutes>
-      </AdminRoutes>,
+        </AdminRoutes>
+      </PrivateRoutes>,
+
     children: [
       {
         index: true,

@@ -6,7 +6,7 @@ import useAuth from '../Hooks/useAuth';
 
 // Create Axios instance
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://goquick-server.vercel.app',
 });
 
 const useAxiosSecure = () => {
