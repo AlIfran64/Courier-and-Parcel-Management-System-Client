@@ -2,7 +2,7 @@
 
 Welcome to **GoQuick**, a full-featured MERN stack application designed to streamline courier and parcel management for logistics companies, providing a seamless experience for customers, delivery agents, and administrators.
 
-## 🔗 Live Demo
+## 🔗 Live Site
 - 🌐 [https://goquick-4b7f4.web.app/](https://goquick-4b7f4.web.app/)
 
 ---
