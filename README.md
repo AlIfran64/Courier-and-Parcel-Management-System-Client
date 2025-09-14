@@ -1,4 +1,4 @@
-# GoQuick - Courier and Parcel Management System
+# GoQuick - Courier and Parcel Management Syste
 
 Welcome to **GoQuick**, a full-featured MERN stack application designed to streamline courier and parcel management for logistics companies, providing a seamless experience for customers, delivery agents, and administrators.
 
