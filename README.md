@@ -74,7 +74,7 @@ GoQuick simplifies courier and parcel operations by enabling customers to book p
 
 ---
 
-## Admin Credentials (For Demo)
+## Admin Credentials
 
 - Email: alifranrafi64@gmail.com  
 - Password: 1234Asdf
